@@ -1,0 +1,21 @@
+
+<h1>Store a place</h1>
+<form action="<%= places_url %>" method="post">
+
+    <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+
+
+    <label for="place_zip">place zip</label>
+    <input type="text"
+           name="place[name]"
+           value="<%= @place.zip %>">
+    <br>
+
+
+    <input type="submit" value="Submit place">
+  </form>
+
+</form>
