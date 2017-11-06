@@ -28,15 +28,17 @@ module PlaceHelper
     response = HTTParty.get(url, headers: {"Accept" => "application/json","User-Key" => "#{ENV["zomato_api_key"]}" })
     zomatoCode = response.parsed_response
 
-    entityID = zomatoCode["location_suggestions"][0]["entity_id"];
-    entityType = zomatoCode["location_suggestions"][0]["entity_type"];
-    zomatoInfo = callZomatoLocationApi(entityID,entityType)
+
 
 
   end
 
-  def callZomatoLocationApi(entity_id,entity_type)
+  def callZomatoLocationApi(zomatoCode)
     #handle spaces in name
+
+    entityID = zomatoCode["location_suggestions"][0]["entity_id"];
+    entityType = zomatoCode["location_suggestions"][0]["entity_type"];
+    zomatoInfo = callZomatoLocationApi(entityID,entityType)
 
     url = "https://developers.zomato.com/api/v2.1/location_details?entity_id=#{entity_id}&entity_type=#{entity_type}"
     response = HTTParty.get(url, headers: {"Accept" => "application/json","User-Key" => "#{ENV["zomato_api_key"]}" })
