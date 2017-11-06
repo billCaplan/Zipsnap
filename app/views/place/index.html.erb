@@ -74,16 +74,13 @@
 
   <div class="col-sm-6 panel" id="ticketmasterApi">
 
-    <% if @ticketmasterEventsList%>
+
     <div class="panel-heading">
       Upcoming Ticketmaster Events
     </div>
     <div class="panel-body">
-    <% @ticketmasterEventsList.each do |event| %>
-       <%= event["name"] %> on <%= event["dates"]["start"]["localDate"] %> at <%= event["_embedded"]["venues"][0]["name"] %>
-       <br>
-    <%end %>
-      <%end %>
+
+
 
     </div>
   </div>

@@ -39,7 +39,7 @@ class PlaceController < ApplicationController
 
     #calls Ticketmaster api
 
-    @ticketmasterEventsList = callTicketmasterApi(@zipCode)
+    #@ticketmasterEventsList = callTicketmasterApi(@zipCode)
 
 
   end
