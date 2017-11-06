@@ -15,7 +15,7 @@ module PlaceHelper
     zipcode = zip;
     apiKey = ENV["weather_api_key"]
 
-    url = "http://api.openweathermap.org/data/2.5/weather?zip=#{zipcode}&APPID=#{apiKey}&units=imperial";
+    url = "https://api.openweathermap.org/data/2.5/weather?zip=#{zipcode}&APPID=#{apiKey}&units=imperial";
     response = HTTParty.get(url)
     final = response.parsed_response
   end
