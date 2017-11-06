@@ -28,7 +28,7 @@ class PlaceController < ApplicationController
     @zomatoInfo = callZomatoLocationCodeApi(@cityName, @latitude, @longitude)
 
     #entityID = zomatoCode["location_suggestions"][0]["entity_id"];
-  #  entityType = zomatoCode["location_suggestions"][0]["entity_type"];
+    #entityType = zomatoCode["location_suggestions"][0]["entity_type"];
     #zomatoInfo = callZomatoLocationApi(entityID,entityType)
 
     #@topCuisines = zomatoInfo["top_cuisines"]
