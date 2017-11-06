@@ -28,11 +28,11 @@
       Weather Info
     </div>
     <div class="panel-body">
-      Current Temperature: <%= @currentTemperature %>
+      Current Temperature: <%= @weatherInfo["main"]["temp"] %>
       <br>
-      Today's Low: <%= @currentMinTemperature %>
+      Today's Low: <%= @weatherInfo["main"]["temp_min"]  %>
       <br>
-      Today's High: <%= @currentMaxTemperature %>
+      Today's High: <%= @weatherInfo["main"]["temp_max"]  %>
       <br>
     </div>
   </div>
@@ -47,7 +47,7 @@
     </a>
     <br>
     <div id="collapse1" class="panel-collapse collapse">
-    <% @bestRatedRestaurant.each do |place| %>
+    <% @zomatoInfo["best_rated_restaurant"].each do |place| %>
       <div class="restaurantPane">
         <div class="">
           <%= place["restaurant"]["name"] %>
@@ -64,7 +64,7 @@
     <div class="panel-body">
     Top Food Types:
     <ul class="list-group">
-    <% @topCuisines.each do |food| %>
+    <% @zomatoInfo["top_cuisines"].each do |food| %>
       <li class="list-group-item"><%=food %></li>
     <% end%>
     </ul>

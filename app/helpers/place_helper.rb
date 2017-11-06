@@ -26,7 +26,13 @@ module PlaceHelper
     placeNoSpace = name.split(" ").join("%20");
     url = "https://developers.zomato.com/api/v2.1/locations?query=#{placeNoSpace}&lat=#{lat}&lon=#{lng}"
     response = HTTParty.get(url, headers: {"Accept" => "application/json","User-Key" => "#{ENV["zomato_api_key"]}" })
-    final = response.parsed_response
+    zomatoCode = response.parsed_response
+
+    entityID = zomatoCode["location_suggestions"][0]["entity_id"];
+    entityType = zomatoCode["location_suggestions"][0]["entity_type"];
+    zomatoInfo = callZomatoLocationApi(entityID,entityType)
+
+
   end
 
   def callZomatoLocationApi(entity_id,entity_type)

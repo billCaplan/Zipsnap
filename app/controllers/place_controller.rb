@@ -17,23 +17,23 @@ class PlaceController < ApplicationController
     @usaState = zipCodeInfo["state"]
 
     #calls Weather
-    weatherInfo = callWeatherApi(@zipCode)
-    if weatherInfo
-      @currentTemperature = weatherInfo["main"]["temp"]
-      @currentMinTemperature = weatherInfo["main"]["temp_min"]
-      @currentMaxTemperature = weatherInfo["main"]["temp_max"]
-    end
+    @weatherInfo = callWeatherApi(@zipCode)
+    #if weatherInfo
+    #  @currentTemperature = weatherInfo["main"]["temp"]
+    #  @currentMinTemperature = weatherInfo["main"]["temp_min"]
+    #  @currentMaxTemperature = weatherInfo["main"]["temp_max"]
+  #  end
 
     #calls Zomato Api
-    zomatoCode = callZomatoLocationCodeApi(@cityName, @latitude, @longitude)
+    @zomatoInfo = callZomatoLocationCodeApi(@cityName, @latitude, @longitude)
 
-    entityID = zomatoCode["location_suggestions"][0]["entity_id"];
-    entityType = zomatoCode["location_suggestions"][0]["entity_type"];
-    zomatoInfo = callZomatoLocationApi(entityID,entityType)
+    #entityID = zomatoCode["location_suggestions"][0]["entity_id"];
+  #  entityType = zomatoCode["location_suggestions"][0]["entity_type"];
+    #zomatoInfo = callZomatoLocationApi(entityID,entityType)
 
-    @topCuisines = zomatoInfo["top_cuisines"]
+    #@topCuisines = zomatoInfo["top_cuisines"]
 
-    @bestRatedRestaurant = zomatoInfo["best_rated_restaurant"]
+    #@bestRatedRestaurant = zomatoInfo["best_rated_restaurant"]
 
 
 
