@@ -16,6 +16,24 @@ class PlaceController < ApplicationController
     @cityName = zipCodeInfo["city"]
     @usaState = zipCodeInfo["state"]
 
+    #calls Weather
+    weatherInfo = callWeatherApi(@zipCode)
+    @currentTemperature = weatherInfo["main"]["temp"]
+
+    #calls Zomato Api
+    zomatoCode = callZomatoLocationCodeApi(@cityName, @latitude, @longitude)
+
+    entityID = zomatoCode["location_suggestions"][0]["entity_id"];
+    entityType = zomatoCode["location_suggestions"][0]["entity_type"];
+    zomatoInfo = callZomatoLocationApi(entityID,entityType)
+
+    @topCuisines = zomatoInfo["top_cuisines"]
+
+
+
+    #calls Ticketmaster api
+
+    @ticketmasterEventsList = callTicketmasterApi(@zipCode)
 
 
   end
