@@ -28,7 +28,12 @@
       Weather Info
     </div>
     <div class="panel-body">
-      <%= @currentTemperature %>
+      Current Temperature: <%= @currentTemperature %>
+      <br>
+      Today's Low: <%= @currentMinTemperature %>
+      <br>
+      Today's High: <%= @currentMaxTemperature %>
+      <br>
     </div>
   </div>
 </div>
@@ -64,6 +69,25 @@
 
     </div>
   </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 panel" id="googleMapsApi">
+    <div class="panel-heading">
+
+    </div>
+    <div class="panel-body">
+
+    </div>
+  </div>
+
+  <div class="col-sm-6 panel" id="newYorkTimesApi">
+    <div class="panel-heading">
+      News from around here
+    </div>
+    <div class="panel-body">
+
+    </div>
 </div>
 
 

@@ -19,6 +19,8 @@ class PlaceController < ApplicationController
     #calls Weather
     weatherInfo = callWeatherApi(@zipCode)
     @currentTemperature = weatherInfo["main"]["temp"]
+    @currentMinTemperature = weatherInfo["main"]["temp_min"]
+    @currentMaxTemperature = weatherInfo["main"]["temp_max"]
 
     #calls Zomato Api
     zomatoCode = callZomatoLocationCodeApi(@cityName, @latitude, @longitude)
