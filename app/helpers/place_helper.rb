@@ -28,7 +28,7 @@ module PlaceHelper
     response = HTTParty.get(url, headers: {"Accept" => "application/json","User-Key" => "#{ENV["zomato_api_key"]}" })
     zomatoCode = response.parsed_response
 
-
+    callZomatoLocationApi(zomatoCode)
 
 
   end
