@@ -36,8 +36,8 @@ module PlaceHelper
   def callZomatoLocationApi(zomatoCode)
     #handle spaces in name
 
-    entityID = zomatoCode["location_suggestions"][0]["entity_id"];
-    entityType = zomatoCode["location_suggestions"][0]["entity_type"];
+    entity_id = zomatoCode["location_suggestions"][0]["entity_id"];
+    entity_type = zomatoCode["location_suggestions"][0]["entity_type"];
 
 
     url = "https://developers.zomato.com/api/v2.1/location_details?entity_id=#{entity_id}&entity_type=#{entity_type}"
