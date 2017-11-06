@@ -31,6 +31,8 @@ class PlaceController < ApplicationController
 
     @topCuisines = zomatoInfo["top_cuisines"]
 
+    @bestRatedRestaurant = zomatoInfo["best_rated_restaurant"]
+
 
 
     #calls Ticketmaster api
