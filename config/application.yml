@@ -1,0 +1,17 @@
+# Add configuration values here, as shown below.
+#
+# pusher_app_id: "2954"
+# pusher_key: 7381a978f7dd7f9a1117
+# pusher_secret: abdc3b896a0ffb85d373
+# stripe_api_key: sk_test_2J0l093xOyW72XUYJHE4Dv2r
+# stripe_publishable_key: pk_test_ro9jV5SNwGb1yYlQfzG17LHK
+#
+# production:
+#   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
+#   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
+
+zip_code_api_key: ax0LcwarfN3ymbUtQwkBO1Q3DsObVTpVpacLqIiQBNdV8xuV49twtj7JFXuPJPOx
+weather_api_key: 6698b9a8b44231ceae9d6623a38ec574
+zomato_api_key: 12f548ea790a29ad9f96b98b35afa688
+ticketmaster_api_key: jr8qaZXLwTigAiGwBkg6lvcvBqsggjej
+new_york_times_api_key: fba4a01121ab4f7ca3f96e6f0c4cf09c
