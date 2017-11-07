@@ -1,5 +1,4 @@
 require 'httparty'
-require 'byebug'
 module PlaceHelper
   def callZipCodeApi(zip)
       zipcode = zip;
