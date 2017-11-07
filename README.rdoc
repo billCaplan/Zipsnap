@@ -1,28 +1,17 @@
-== README
+== Zipsnap
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Zipsnap is used for quickly getting information about an unexpected destination.
 
-Things you may want to cover:
+Just input a Zip Code and away you go.
 
-* Ruby version
+* Built using Rails and various 3rd Party API's such as:
 
 * System dependencies
 
-* Configuration
+* Zip Code API
 
-* Database creation
+* Open Weather Map
 
-* Database initialization
+* Zomato
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Ticketmaster
