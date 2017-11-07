@@ -38,7 +38,8 @@ gem 'figaro'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem 'byebug', '9.0.3'
+  gem 'rb-readline'
 end
 
 group :development do

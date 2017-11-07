@@ -1,4 +1,5 @@
 require 'httparty'
+require 'byebug'
 module PlaceHelper
   def callZipCodeApi(zip)
       zipcode = zip;
@@ -45,17 +46,15 @@ module PlaceHelper
     final = response.parsed_response
   end
 
+
   def callTicketmasterApi(zip)
     zipcode = zip;
-    apiKey = ENV["ticketmaster_api_key"]
-
-    url = "https://app.ticketmaster.com/discovery/v2/events.json?postalCode=#{zip}&apikey=#{apiKey}";
+    apiKey = ENV["ticketmaster_api_key"];
+    url = "https://app.ticketmaster.com/discovery/v2/events.json?postalCode=#{zipcode}&apikey=#{apiKey}";
     response = HTTParty.get(url)
-    final = response.parsed_response
 
-    if final["page"]["number"] != 0
-      final = final["_embedded"]["events"]
-    end
+    final = response.parsed_response;
+
 
   end
 

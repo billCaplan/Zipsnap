@@ -39,8 +39,14 @@ class PlaceController < ApplicationController
 
     #calls Ticketmaster api
 
-    #@ticketmasterEventsList = callTicketmasterApi(@zipCode)
+    ticketmasterEventsBig = callTicketmasterApi(@zipCode)
 
 
+    if ticketmasterEventsBig.length == 3
+      @ticketmasterEvents = ticketmasterEventsBig["_embedded"]["events"]
+    else
+      @ticketmasterEvents = false
+    end
+    
   end
 end
